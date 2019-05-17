@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'pg'
 
 gem 'devise' 
-
+gem "font-awesome-rails"
 gem 'milia'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
@@ -21,7 +21,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'jquery'
+gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
