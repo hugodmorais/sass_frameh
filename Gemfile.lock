@@ -261,7 +261,7 @@ DEPENDENCIES
   milia
   pg
   puma (~> 3.11)
-  rails (~> 5.2.3)
+  rails (~> 5.1)
   rails_12factor
   sass-rails (~> 5.0)
   selenium-webdriver
