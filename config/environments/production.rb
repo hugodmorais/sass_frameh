@@ -3,6 +3,19 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'secure.simple-milia-app.com', :protocol => 'https' }
   config.action_mailer.delivery_method = :smtp
 
+  
+  # Code is not reloaded between requests.
+  config.cache_classes = true
+  
+  # Eager load code on boot. This eager loads most of Rails and
+  # your application in memory, allowing both threaded web servers
+  # and those relying on copy on write to perform better.
+  # Rake tasks automatically ignore this option for performance.
+  config.eager_load = true
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'sassframeh.herokuapp.com', :protocol => 'https'}
+  
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
@@ -12,21 +25,8 @@ Rails.application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true
     }
-
-  # Code is not reloaded between requests.
-  config.cache_classes = true
-
-  # Eager load code on boot. This eager loads most of Rails and
-  # your application in memory, allowing both threaded web servers
-  # and those relying on copy on write to perform better.
-  # Rake tasks automatically ignore this option for performance.
-  config.eager_load = true
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'sassframeh.herokuapp.com', :protocol => 'https'}
-
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
@@ -52,7 +52,7 @@ Rails.application.configure do
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
-    
+
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
