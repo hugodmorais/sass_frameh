@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "http://photoframeh.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "http://sassframeh.herokuapp.com" }
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
