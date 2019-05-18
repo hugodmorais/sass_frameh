@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { 
     :registrations => "registrations",
-    :confirmations => "confirmations",
+    :confirmations => "milia/confirmations",
     :sessions => "milia/sessions", 
     :passwords => "milia/passwords", 
   }
